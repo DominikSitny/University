@@ -3,7 +3,7 @@ import edu.princeton.cs.introcs.StdOut;
 
 public class Start {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		// TODO Auto-generated method stub
 		
 		StdOut.print("Dieses Programm addiert zwei ganze Zahlen.");
