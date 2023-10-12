@@ -9,7 +9,7 @@ public class Start {
 		StdOut.print("Dieses Programm addiert zwei ganze Zahlen.");
 		StdOut.print("Bitte erste Zahl eingeben: ");
 		int n1 = StdIn.readInt();
-		StdOut.print("Bitte zweite Zahl eingeben: ");
+		StdOut.print("Bitte zweite Zahl eingebeasn: ");
 		int n2 = StdIn.readInt();
 		int sum = n1 + n2;
 		StdOut.print("Die Summe ist " + sum);
