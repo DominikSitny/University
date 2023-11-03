@@ -19,7 +19,7 @@ public class Aufgabe3 {
 		StdOut.println("Minute");
 		int secondMinutes = StdIn.readInt();
 		
-		//Zuerst auf gesamte Minutenlänge umrechnen
+		//Auf gesamte Minutenlänge umrechnen
 		int firstTotalMinutes = firstHour * 60 + firstMinutes;
 		int secondTotalMinutes = secondHour * 60 + secondMinutes;
 		
