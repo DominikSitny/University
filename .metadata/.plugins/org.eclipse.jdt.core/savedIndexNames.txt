@@ -3,5 +3,4 @@ INDEX VERSION 1.131+/Users/dominiksitny/Development/University/.metadata/.plugin
 802224913.index
 1490537351.index
 1865797976.index
-3501438234.index
-3468314333.index
+3333643812.index

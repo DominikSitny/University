@@ -62,7 +62,27 @@ public class Aufgabe {
 		case 12: monatsanzahl = 31;
 			break;
 		}
-		StdOut.print("\nDie Monatsanzahl beträgt " + monatsanzahl + " Tage." );
+		StdOut.println("\nDie Monatsanzahl beträgt " + monatsanzahl + " Tage." );
+	}
+	
+	
+	public void aufgabe3() {
+		
+		StdOut.println("Geben Sie den Wert ein");
+		double wert = StdIn.readDouble();
+		double neuerWert = 0;
+		StdOut.println("Um den Wert von Fahrenheit in Celsius umzurechnen, tippen Sie bitte auf C");
+		StdOut.println("Um den Wert von Celsius in Fahrenheit umzurechnen, tippen Sie bitte auf F");
+		String buchstabe = StdIn.readString();
+
+		if(buchstabe.equalsIgnoreCase("C")) {
+			neuerWert = (wert-32) * 5 / 9;
+			StdOut.print("Ihr Wert " + wert + " wurde in " + neuerWert +  " umgewandelt");
+		}
+		else if(buchstabe.equalsIgnoreCase("F")) {
+			neuerWert = (wert * 9 / 5) + 32;
+			StdOut.print("Ihr Wert " + wert + " wurde in " + neuerWert +  " umgewandelt");
+		}
 	}
 	
 }
