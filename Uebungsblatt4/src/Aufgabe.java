@@ -12,57 +12,53 @@ public class Aufgabe {
 		
 		boolean schaltjahr = false;
 		
-		if(jahr % 4 == 0 && !(jahr % 100 == 0)) {
+		if(jahr % 400 == 0) {
 			StdOut.print("Ihre Jahreszahl ist ein Schaltjahr.");
 			schaltjahr = true;
-		}
-		else if(jahr % 100 == 0 && !(jahr % 400 == 0)) {
-			StdOut.print("Ihre Jahreszahl ist kein Schaltjahr.");
-		}
-		else if(jahr % 400 == 0) {
+		} else if(jahr % 100 == 0) {
+			StdOut.print("Ihre Jahreszahl ist kein Schaltjahr.");			
+		} else if(jahr % 4 == 0) {
 			StdOut.print("Ihre Jahreszahl ist ein Schaltjahr.");
 			schaltjahr = true;
-		}
-		else {
-			StdOut.print("Bei der Jahreszahl ist ein Fehler aufgetaucht.");
 		}
 		
-		int monatsanzahl = 0;
+		
+		int anzahlTage = 0;
 		
 		switch(monat) {
 		
-		case 1: monatsanzahl = 31;
+		case 1: anzahlTage = 31;
 			break;
 		case 2: 
 			if(schaltjahr) {
-				monatsanzahl = 29;
+				anzahlTage = 29;
 			}
 			else {
-				monatsanzahl = 28;
+				anzahlTage = 28;
 			}
 			break;
-		case 3: monatsanzahl = 31;
+		case 3: anzahlTage = 31;
 			break;
-		case 4: monatsanzahl = 30;
+		case 4: anzahlTage = 30;
 			break;
-		case 5: monatsanzahl = 31;
+		case 5: anzahlTage = 31;
 			break;
-		case 6: monatsanzahl = 30;
+		case 6: anzahlTage = 30;
 			break;
-		case 7: monatsanzahl = 31;
+		case 7: anzahlTage = 31;
 			break;
-		case 8: monatsanzahl = 31;
+		case 8: anzahlTage = 31;
 			break;
-		case 9: monatsanzahl = 30;
+		case 9: anzahlTage = 30;
 			break;
-		case 10: monatsanzahl = 31;
+		case 10: anzahlTage = 31;
 			break;
-		case 11: monatsanzahl = 30;
+		case 11: anzahlTage = 30;
 			break;
-		case 12: monatsanzahl = 31;
+		case 12: anzahlTage = 31;
 			break;
 		}
-		StdOut.println("\nDie Monatsanzahl beträgt " + monatsanzahl + " Tage." );
+		StdOut.println("\nDie Anzahl der Tage beträgt " + anzahlTage + " Tage." );
 	}
 	
 	
@@ -76,12 +72,15 @@ public class Aufgabe {
 		String buchstabe = StdIn.readString();
 
 		if(buchstabe.equalsIgnoreCase("C")) {
-			neuerWert = (wert-32) * 5 / 9;
+			neuerWert = 5.0 / 9.0 * (wert - 32.0);
 			StdOut.print("Ihr Wert " + wert + " wurde in " + neuerWert +  " umgewandelt");
 		}
 		else if(buchstabe.equalsIgnoreCase("F")) {
 			neuerWert = (wert * 9 / 5) + 32;
 			StdOut.print("Ihr Wert " + wert + " wurde in " + neuerWert +  " umgewandelt");
+		}
+		else {
+			System.out.println("Fehler");
 		}
 	}
 	
