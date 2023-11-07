@@ -1,0 +1,16 @@
+{
+	{
+		"nummer": "1",
+		"vorname": "Max",
+		"nachname": "Mustermann",
+		"plz": "32657",
+		"ort": "Lemgo"
+	},
+	{
+		"nummer": "2",
+		"vorname": "Eva",
+		"nachname": "Musterfrau",
+		"plz": "32657",
+		"ort": "Lemgo"
+	}
+}

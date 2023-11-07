@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT gedichtssammlung (gedicht)>
+	<!ELEMENT gedicht (autor+,titel, untertitel?, strophe+)>
+	<!ATTLIST gedicht 
+	Erscheinungsjahr CDATA #REQUIRED
+	Sprache CDATA #REQUIRED
+	>
+		<!ELEMENT autor (vorname, nachname)>
+			<!ELEMENT vorname (#PCDATA)>
+			<!ELEMENT nachname (#PCDATA)>
+		<!ELEMENT titel (#PCDATA)>
+		<!ELEMENT untertitel (#PCDATA)>
+		<!ELEMENT strophe (vers+)>
+			<!ELEMENT vers (#PCDATA | fett)*>
+			<!ELEMENT fett (#PCDATA)>	
