@@ -1,3 +1,4 @@
+import edu.princeton.cs.introcs.StdIn;
 import edu.princeton.cs.introcs.StdOut;
 
 public class Aufgabe {
@@ -84,6 +85,35 @@ public class Aufgabe {
 					
 			}
 			StdOut.println();
+		}
+		
+	}
+	
+	
+	//Zusatzaufgabe: Die Spitze des Dreiecks zeigt nun nach oben
+	public void aufgabe3d() {	
+		int zeilen = 6;	
+		for(int y=0; y<zeilen;y++) {			
+			for(int x=1; x<=zeilen*2-1;x++) {			
+				if(x>=zeilen-y && x<=zeilen+y) {
+					StdOut.print("*");
+				}
+				else {
+					StdOut.print(" ");
+				}			
+			}
+			StdOut.println();			
+		}
+		
+	}
+	
+	//Zusatzaufgabe: Die Spitze zeigt nach rechts
+	public void aufgabe3e() {
+	
+		int zeilen = 4;
+		for(int i=0;i<zeilen;i++) {
+			
+			
 		}
 		
 	}

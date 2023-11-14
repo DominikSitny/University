@@ -14,3 +14,4 @@ Aufgabe 3:
 */
 Select Upper(name),Upper(job), gehalt * 1.55 as "W-Geld"
 from ma;
+
