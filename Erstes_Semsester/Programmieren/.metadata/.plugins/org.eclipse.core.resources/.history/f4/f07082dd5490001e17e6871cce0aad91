@@ -8,8 +8,8 @@ public class Buch {
 	
 	public Buch(String name, int artikelnummer, double preis, int bestand) {
 		
-		this.name =  name;
-		this.artikelnummer = artikelnummer;
+		this.name =  "Name";
+		this.artikelnummer = 1;
 		setBestand(bestand);
 		setPreis(preis);
 		

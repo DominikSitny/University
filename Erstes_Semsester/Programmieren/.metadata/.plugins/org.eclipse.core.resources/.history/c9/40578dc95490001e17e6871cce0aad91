@@ -6,10 +6,10 @@ public class Buch {
 	private double preis;
 	private int bestand;
 	
-	public Buch(String name, int artikelnummer, double preis, int bestand) {
+	public Buch(double preis, int bestand) {
 		
-		this.name =  name;
-		this.artikelnummer = artikelnummer;
+		this.name =  "Name";
+		this.artikelnummer = 1;
 		setBestand(bestand);
 		setPreis(preis);
 		

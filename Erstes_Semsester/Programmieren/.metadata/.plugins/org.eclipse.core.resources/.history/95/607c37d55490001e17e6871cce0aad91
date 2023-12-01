@@ -8,7 +8,7 @@ public class Buchverwaltung {
 		
 		Buch[] arrBuch = new Buch[menge];
 		for(int i=0;i<menge;i++) {
-			Buch buch = new Buch("Name", i, 9.99, i);
+			Buch buch = new Buch(9.99, i);
 			arrBuch[i] = buch;
 		}
 		
