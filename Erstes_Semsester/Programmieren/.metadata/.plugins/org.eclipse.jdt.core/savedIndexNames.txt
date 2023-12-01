@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/Users/dominiksitny/Development/University/Erstes_Semsester/Programmieren/.metadata/.plugins/org.eclipse.jdt.core
+3501438234.index
+1606029214.index
+1865797976.index

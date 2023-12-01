@@ -6,7 +6,7 @@ public class Buch {
 	private double preis;
 	private boolean bestand;
 	
-	public Buch(double preis, boolean bestand) {
+	public Buch(String name, int artikelnummer, double preis, boolean bestand) {
 		
 		this.name =  "Name";
 		this.artikelnummer = 1;
