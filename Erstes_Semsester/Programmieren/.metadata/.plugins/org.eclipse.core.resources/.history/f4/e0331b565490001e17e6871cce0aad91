@@ -36,12 +36,15 @@ public class Buch {
 		this.preis = preis;
 	}
 
+	public int getBestand() {
+		return bestand;
+	}
 
-	public void setBestand(int bestand) {
+	public void setBestand(boolean bestand) {
 		this.bestand = bestand;
 	}
 	
-	public int getBestand() {
+	public boolean getBestand() {
 		return this.bestand;
 	}
 	

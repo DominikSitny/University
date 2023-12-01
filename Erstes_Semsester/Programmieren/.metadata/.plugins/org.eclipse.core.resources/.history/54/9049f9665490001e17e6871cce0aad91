@@ -41,7 +41,7 @@ public class Buch {
 		this.bestand = bestand;
 	}
 	
-	public int getBestand() {
+	public boolean getBestand() {
 		return this.bestand;
 	}
 	

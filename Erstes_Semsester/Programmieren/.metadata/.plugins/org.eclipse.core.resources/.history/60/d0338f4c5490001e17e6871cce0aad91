@@ -6,7 +6,7 @@ public class Buch {
 	private double preis;
 	private int bestand;
 	
-	public Buch(double preis, int bestand) {
+	public Buch(double preis, boolean bestand) {
 		
 		this.name =  "Name";
 		this.artikelnummer = 1;
@@ -36,12 +36,15 @@ public class Buch {
 		this.preis = preis;
 	}
 
+	public boolean isBestand() {
+		return bestand;
+	}
 
-	public void setBestand(int bestand) {
+	public void setBestand(boolean bestand) {
 		this.bestand = bestand;
 	}
 	
-	public int getBestand() {
+	public boolean getBestand() {
 		return this.bestand;
 	}
 	
