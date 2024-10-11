@@ -6,7 +6,11 @@ Bestellung/Kunde zu einer losen Kopplung beiträgt
 - Erstellt aber noch kein Objekt; Das Objekt wird zuerst während der Laufzeit erstellt
 - Hier kann eine Klasse, die das Interface Kunde implementiert hat, genutzt werden, um die Deklaration Kunde zu initialisieren
 
-1b) Enterprise Architect
+1b) 
+Erstellen Sie mit einem UML-Werkzeug ein Klassendiagramm des Programms.
+Wie machen sich Abhängigkeiten auf UML-Ebene bemerkbar?
+
+Starke
 
 1c)
 Überlegen Sie, warum die Verwendung der Klasse Kunde in der Klasse Bestellung nicht optimal ist, 
@@ -19,4 +23,6 @@ werden und kann je nach Anfoderung von einer Kundenart zB neu erzeugt werden.
 
 1d) Klassen und Interface erstellt
 
-1e)  Enterprise Architect
+1e)
+Erstellen Sie mit einem UML-Werkzeug ein Klassendiagramm Ihrer veränderten
+Lösung. Wie hat sich das Modell gegenüber b) verändert?
