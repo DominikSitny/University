@@ -1,0 +1,22 @@
+Aufgabe 1a)
+Diskutieren Sie, inwieweit das Prinzip der Kapselung in Java am Beispiel
+Bestellung/Kunde zu einer losen Kopplung beiträgt
+
+- Die Klasse Bestellung deklariert einen Parameter der Klasse Kunde
+- Erstellt aber noch kein Objekt; Das Objekt wird zuerst während der Laufzeit erstellt
+- Hier kann eine Klasse, die das Interface Kunde implementiert hat, genutzt werden, um die Deklaration Kunde zu initialisieren
+
+1b) Enterprise Architect
+
+1c)
+Überlegen Sie, warum die Verwendung der Klasse Kunde in der Klasse Bestellung nicht optimal ist, 
+wenn Sie verschiedene Arten von Kunden unterstützen möchten, z.B. zusätzlich auch GoldKunde und 
+SilberKunde. GoldKunden und SilberKunden sollen jeweils 20 bzw. 10 Prozent Rabatt bekommen.
+
+Das Problem ist, dass Kunde eine Klasse ist. Wenn verschiedene Arten von Kunde entstehen sollen 
+muss immer eine neue Variable deklariert werden. Bei einem Interface muss Kunde nur einmal deklariert 
+werden und kann je nach Anfoderung von einer Kundenart zB neu erzeugt werden.
+
+1d) Klassen und Interface erstellt
+
+1e)  Enterprise Architect
