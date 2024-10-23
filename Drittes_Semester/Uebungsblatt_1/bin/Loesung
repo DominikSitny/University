@@ -10,7 +10,7 @@ Bestellung/Kunde zu einer losen Kopplung beiträgt
 Erstellen Sie mit einem UML-Werkzeug ein Klassendiagramm des Programms.
 Wie machen sich Abhängigkeiten auf UML-Ebene bemerkbar?
 
-Starke
+Enterprise Archichtect
 
 1c)
 Überlegen Sie, warum die Verwendung der Klasse Kunde in der Klasse Bestellung nicht optimal ist, 
@@ -26,3 +26,92 @@ werden und kann je nach Anfoderung von einer Kundenart zB neu erzeugt werden.
 1e)
 Erstellen Sie mit einem UML-Werkzeug ein Klassendiagramm Ihrer veränderten
 Lösung. Wie hat sich das Modell gegenüber b) verändert?
+
+Enterprise Architect
+
+2a)
+Ermitteln Sie, mit welchen anderen Klassen die Klassen Kunde und Bestellungen
+gekoppelt sind. Was für eine Form von Kopplung liegt hier vor? Nutzen Sie zur
+Identifizierung der Kopplung sowohl das Klassendiagramm als auch das Java
+Programm.
+
+Kunde:
+- Kopplung durch Erzeugung (Klasse Warenkorb)
+
+Bestellungen:
+- Kopplung durch Erzeugung (TreeMap der Typen Integer & Bestellung)
+- In der Methode Bestellung: 
+	- Kopplung durch Aufruf (Arraylist<Artikel>, Kunde)
+	- Kopplung durch Erzeugung (Klasse Bestellung)
+
+2c)
+Erklären Sie, inwieweit die Vererbung von Artikel zu Kleidungsartikel und
+Schuhartikel mögliche Änderungen vereinfacht. Welche Klassen müssten ohne
+Vererbung anders implementiert werden und welche Klassen müssten zusätzlich
+bei einer Einführung von Accessoires als neue Artikel angepasst werden ohne die
+Vererbung?
+
+Mögliche Anpassungen, die alle Artikelarten betreffen, können in der Klasse Artikel geändert werden. 
+Beispiel: int artikelNr --> String artikelNr. 
+Einmalige Veränderung in der Oberklasse, nicht n-malige Veränderung in n-Unterklassen
+
+Die Klassen Kleidungsartikel und Schuhartikel müssten zusäzlich um die Attribute und Methoden der 
+Oberklasse Artikel jeweils ergänzt werden. Zusätzlich müssen beide Konstruktoren der Unterklassen 
+angepast werden
+
+
+3b)
+Die Klasse Pizzeria ist gekoppelt mit:
+- Lose Kopplung mit Pizza
+- Kopplung durch Erzeugung mit:
+	- BerlinerSalamiPizza
+	- BerlinerSchinkenPizza
+	- BerlinerThunfischPizza
+	- ... (Siehe Klasse Pizzeria in der Bedingung)
+
+
+3c)
+- Neue Klasse KoelnerHawaiiPizza erstellen, die Pizza erbt
+- Klasse Pizzeria um eine if Anweisung erweitern
+- Neue Art "Koeln" in die Bedingung setzen
+
+
+
+4a)
+Package WetterDaten.src
+- Klasse Wetter: 
+	- Kopplung durch Erzeugung:
+		- AktuelleAnzeige
+		- StatistikAnzeige
+		- VorhersageAnzeige
+	- Kopplung durch Aufruf
+		- Alle erzeugten Elemente rufen jeweils die Methode aktualisieren auf
+		
+b)
+Package Wetterdaten2.src
+- Klasse WetterDatenImp.src 
+	- Hier finden weniger Kopplungen statt - Dependency Injection genutzt - Lose Kopplung genutzt - 
+
+
+5b)
+Erweitern Sie die Anwendung aus a) durch eine Funktionalität zum Speichern und
+Laden der Bücherliste aus einer Datei. Wo müssen Änderungen durchgeführt
+werden?
+
+Interface um zwei neue Methoden erweitern; Die konkrete Klasse ausimplementieren --> Keine Auswirkungen auf andere Klassen gehabt
+
+
+
+
+6a)
+Erklären Sie warum in diesem Beispiel folgende Architekturprinzipien verletzt
+werden:
+a. Trennung von Verantwortlichkeiten: 
+	- Klasse FlightBooking: Methode processBooking und cancelBooking in FlightBookingService auslagern
+b. Lose Kopplung
+	- Klasse FlightBooking: Zeile 14 + 15 Kopplung durch Erzeugung. Lösung: Initialisierung auslagern in einer Methode, welche das gekoppelte Objekt erwartet
+c. Schnittstellenabstraktion:
+	- PaymentProcesser und FlightBookingService können jeweils passendes Interface implementieren. 
+d. Entwurf für Veränderungen:
+	Wenn eine Funktion für eine andere Art des PaymentProcessors anders implementiert werden muss --> Aufwändig, weil kein Interface gebaut wurde
+
