@@ -13,6 +13,7 @@ public class Aufgabe {
 		}
 		
 	}
+	//Zesz
 	
 	public void aufgabe2() {
 		

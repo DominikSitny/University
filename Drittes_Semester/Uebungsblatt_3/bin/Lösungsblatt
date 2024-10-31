@@ -1,0 +1,44 @@
+Übungsblatt3
+
+2a)
+- Klient: 
+- Zielinterface: IPersonenleser (einzige Interface in dem Beispiel)
+- Adapter: CSVLeserAdapter
+- AdaptierteKlasse: CSVLeser
+
+2d) 
+Siehe Projekt AdapterUebungOhneLoesung
+
+3a)
+Blatt: Speise
+Kompositum: Speisekarte
+Komponente: Speisekartenkomponente
+
+
+4b)
+
+Der detallierte Vergleich:
+Vererbung: 
+	+ Abstrakte Klasse, weil Attribute und Methoden vererbt werden
+Flexibilität bei der Implementierung:
+	+ Interface, weil jede Methode nochmal neu implementiert werden muss, egal ob Blatt oder Kompositum
+Code-Duplizierung:
+	- Interface, weil wenn Blatt und Kompositum gleiche Attribute und Logik verwenden möchten, 
+	muss das bei beiden Klassen jeweils gleich implementiert werden
+Erweiterbarkeit:
+	Beide gleich
+Standardimplementierung für optionale Methoden:
+	+ Abstrakte Klasse, weil die nur einmal in der Kompontenklasse implementiert werden muss
+Fehlerbehandlung:
+	- Interface, weil hier beide Klassen ggf. die gleiche Methode implementieren müssen
+Klahrheit und Struktur:
+	- abstrakte Klasse, weil man nicht auf den ersten Blick sieht, welche Methoden geerbt wurden. 
+	Man muss bei Überschreibung einer Methode kein @Override eingeben.
+	
+6c)
+statische Fabrik nur Nutzen wenn die Konkreten Klassen gleiche Logik beinhaltet
+
+
+7e)
+Neue Version besser in:
+- Erweiterbarkeit, Struktur, Übersichtlichkeit und Verhinderung von Code-Redundanz
