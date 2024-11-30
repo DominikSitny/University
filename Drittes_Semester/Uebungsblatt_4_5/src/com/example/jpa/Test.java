@@ -1,39 +1,46 @@
 package com.example.jpa;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+import com.example.Factory.EntityFactory;
+
+
 public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		//Reihenfolge beim Speichern in die DB wichtig! Wenn Student mit Viorlesung gespeichert werden soll, muss voerst passende Professor Objekt in der DB sein
+		
 		DatabaseService service = DatabaseService.getInstance();
 		
-		Student s = new Student();
-		s.setVorname("Dominik");
-		s.setNachname("Sitny");
-		Student s2 = new Student();
-		s2.setVorname("Jennifer");
-		s2.setNachname("Sitny");
-		Student s3 = new Student();
-		s3.setVorname("Luke");
-		s3.setNachname("Samarah");
+		EntityFactory ef = new EntityFactory(10, 5, 20);
 		
-		Adresse adresse = new Adresse();
-		adresse.setPLZOrt("32139 Spenge");
-		adresse.setStrasseHNr("Rabeneck 10");
-		Adresse adresse2 = new Adresse();
-		adresse2.setPLZOrt("12345 Heepen");
-		adresse2.setStrasseHNr("Lutscher 69");
+		Iterator it1 = ef.getProfessoren().iterator();
+		while(it1.hasNext()) {
+			service.addObject(it1.next());
+		}
 		
-		s.setAdresse(adresse);	
-		s2.setAdresse(adresse);
-		s3.setAdresse(adresse2);
+		Iterator it2 = ef.getStudenten().iterator();
+		while(it2.hasNext()) {
+			service.addObject(it2.next());
+		}
+	
+		for(Student s : service.readStudents()) {
+			System.out.println(s.toString());
+		}
 		
-		service.addStudent(s);
-		service.addStudent(s2);
-		service.addStudent(s3); 	
+		Student s = service.readStudent("Dominik", "Sitny");
 		
+		if(s == null) {
+			System.out.println("Leider kein Glück gehabt. Diesmal wurde der Student nicht mit den Namen generiert");
+		}else {
+			System.out.println(s.toString());
+		}
 		
-		
+		System.out.println(service.readProf("Prof. Dirk Schuster").toString());
 	}
 
 }

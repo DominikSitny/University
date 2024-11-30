@@ -25,19 +25,40 @@ public class DatabaseService {
 		return instance;	
 	}
 	
-	public synchronized void addStudent(Student stud) {
-		if(stud == null) {
-			System.out.println("student is null");
+	public synchronized void addObject(Object obj) {
+		if(obj == null) {
+			System.out.println("Object is null");
 			return;
 		}
 		em.getTransaction().begin();
-		em.persist(stud);
+		em.persist(obj);
 		em.getTransaction().commit();
 	}
 	
 	public List<Student> readStudents(){
 		TypedQuery<Student> query = em.createQuery("Select s From Student s", Student.class);
 		List<Student> students = query.getResultList();
+		
 		return students;
 	}
+	
+	public Student readStudent(String vorname, String nachname){
+		TypedQuery<Student> query = em.createQuery("Select s From Student s where s.vorname Like :vorname And s.nachname Like :nachname", Student.class);
+		query.setParameter("vorname", vorname);
+		query.setParameter("nachname", nachname);
+		if(query.getResultList().size() == 1) {
+			Student s = query.getSingleResult();
+			return s;
+		}{
+			return null;
+		}
+		
+	}
+	
+	public Professor readProf(String name) {
+		TypedQuery<Professor> query = em.createQuery("Select p from Professor p Where p.name Like :name",Professor.class);
+		query.setParameter("name", name);
+		return query.getSingleResult();
+	}
+	
 }
