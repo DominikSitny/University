@@ -1,6 +1,12 @@
 
 public class BefehlLichtAus implements IBefehl{
 
+	@Override
+	public String toString() {
+		return "BefehlLichtAus []";
+	}
+
+
 	Lichtquelle quelle;
 
 	
@@ -17,6 +23,10 @@ public class BefehlLichtAus implements IBefehl{
 	}
 
 
-	
+	@Override
+	public IBefehl undo() {
+		// TODO Auto-generated method stub
+		return this;
+	}
 
 }
