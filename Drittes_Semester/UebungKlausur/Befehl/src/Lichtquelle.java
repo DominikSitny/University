@@ -9,4 +9,7 @@ public class Lichtquelle {
 		System.out.println("Licht ist aus");
 	}
 	
+	public void LichtDimmen() {
+		System.out.println("Licht dimmmen");
+	}
 }

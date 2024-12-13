@@ -1,27 +1,23 @@
 
-public class BefehlLichtAus implements IBefehl{
+public class BefehlLichtDimmen implements IBefehl{
 
 	@Override
 	public String toString() {
-		return "BefehlLichtAus []";
+		return "BefehlLichtDimmen []";
 	}
 
-
-	Lichtquelle quelle;
-
+	private Lichtquelle quelle;
 	
-	public BefehlLichtAus(Lichtquelle quelle) {
+	public BefehlLichtDimmen(Lichtquelle quelle) {
 		super();
 		this.quelle = quelle;
 	}
 
-
 	@Override
 	public void fuehreAus() {
 		// TODO Auto-generated method stub
-		this.quelle.LichtAus();
+		quelle.LichtDimmen();
 	}
-
 
 	@Override
 	public IBefehl undo() {
@@ -29,4 +25,7 @@ public class BefehlLichtAus implements IBefehl{
 		return this;
 	}
 
+	
+	
+	
 }
