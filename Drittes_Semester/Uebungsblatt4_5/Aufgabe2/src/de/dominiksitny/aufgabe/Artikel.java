@@ -17,9 +17,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 
 @Entity
-//@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@Inheritance(strategy=InheritanceType.JOINED)
-@DiscriminatorColumn(name = "Typ", discriminatorType = DiscriminatorType.STRING)
+@Inheritance(strategy=InheritanceType.JOINED )
+@DiscriminatorColumn(name = "Disc", discriminatorType = DiscriminatorType.STRING)
 public class Artikel {
 
 	@Id
